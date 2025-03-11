@@ -1,0 +1,10 @@
+deployment:
+  replicas: 2
+  image: helloworld:latest
+  imagePullPolicy: IfNotPresent
+  containerPort: 3000
+
+service:
+  type: NodePort
+  port: 80
+  targetPort: 3000
