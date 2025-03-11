@@ -6,20 +6,12 @@ This project implements a Rails application that responds with "Hello World" to 
 
 ## Architecture
 
-┌─────────────────┐     ┌──────────────┐     ┌───────────────┐     ┌────────────────┐
-│                 │     │              │     │               │     │                │
-│  Rails "Hello   │ ──> │   Docker     │ ──> │  Kubernetes   │ ──> │  Load Balancer │
-│  World" App     │     │  Container   │     │  Cluster      │     │                │
-│                 │     │              │     │               │     │                │
-└─────────────────┘     └──────────────┘     └───────────────┘     └────────────────┘
-                                                     ▲
-                                                     │
-                                                     │
-                                               ┌─────┴──────┐
-                                               │            │
-                                               │  Terraform │
-                                               │            │
-                                               └────────────┘
+```mermaid
+flowchart LR
+    A["Rails 'Hello World' App"] --> B["Docker Container"]
+    B --> C["Kubernetes Cluster"]
+    C --> D["Load Balancer"]
+```
 
 
 * Rails Application: A simple Ruby on Rails application that returns "Hello World" for all requests
