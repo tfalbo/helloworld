@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project implements a Rails application that responds with "Hello World" to all web requests. The application is containerized with Docker and deployed to Kubernetes using Helm charts. This document also outlines how Terraform would be used to orchestrate the infrastructure in a production environment.
+This project implements a Rails application that responds with "Hello World" to all web requests. The application is containerized with Docker and deployed to Kubernetes using Helm charts.
 
 ## Architecture
 
